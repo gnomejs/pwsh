@@ -24,4 +24,4 @@
  * ```
  * @module
  */
-export * from "./pwsh.ts";
+export * from "./cli.ts";

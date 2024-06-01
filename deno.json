@@ -1,9 +1,9 @@
 {
     "name": "@gnome/pwsh",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "exports": {
         ".": "./mod.ts",
-        "./pwsh": "./pwsh.ts"
+        "./cli": "./cli.ts"
     },
     "compilerOptions": {
         "lib": ["deno.worker"]
@@ -24,11 +24,11 @@
     "publish": {
         "include": [
             "mod.ts",
-            "pwsh.ts",
+            "cli.ts",
             "README.md",
             "LICENSE.md",
             "deno.json"
         ]
     },
-    "imports": { "@gnome/exec": "jsr:@gnome/exec@^0.4.1" }
+    "imports": { "@gnome/exec": "jsr:@gnome/exec@^0.4.4" }
 }

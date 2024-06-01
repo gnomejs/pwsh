@@ -35,7 +35,7 @@ export class PwshCommand extends ShellCommand {
     /**
      * Gets the file extension associated with PowerShell scripts.
      */
-    get ext() : string {
+    get ext(): string {
         return PWSH_EXT;
     }
 
@@ -45,7 +45,7 @@ export class PwshCommand extends ShellCommand {
      * @param isFile Specifies whether the script is a file or a command.
      * @returns The shell arguments for executing the script.
      */
-    getShellArgs(script: string, isFile: boolean) : string[] {
+    getShellArgs(script: string, isFile: boolean): string[] {
         const params = this.shellArgs ?? ["-NoLogo", "-NonInteractive", "-NoProfile", "-ExecutionPolicy", "Bypass"];
 
         if (isFile) {
@@ -65,6 +65,6 @@ export class PwshCommand extends ShellCommand {
  * @param options - Optional options for the shell command.
  * @returns A new instance of the PwshCommand class.
  */
-export function pwsh(script: string, options?: ShellCommandOptions) : PwshCommand {
+export function pwsh(script: string, options?: ShellCommandOptions): PwshCommand {
     return new PwshCommand(script, options);
 }
